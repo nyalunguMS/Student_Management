@@ -1,4 +1,8 @@
 package org.example.student_management.dto;
 
-public record DepartmentResponse() {
+public record DepartmentResponse(
+        Long id,
+        String name,
+        String description
+) {
 }

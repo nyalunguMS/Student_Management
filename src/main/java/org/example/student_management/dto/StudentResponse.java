@@ -1,4 +1,11 @@
 package org.example.student_management.dto;
 
-public record StudentResponse() {
+public record StudentResponse(
+        Long id,
+        String firstName,
+        String lastName,
+        String email,
+        Long departmentId,
+        String departmentName
+) {
 }
