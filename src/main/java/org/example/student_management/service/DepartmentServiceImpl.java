@@ -4,7 +4,6 @@ import org.example.student_management.dto.*;
 import org.example.student_management.entity.Department;
 import org.example.student_management.exception.ResourceNotFoundException;
 import org.example.student_management.repository.DepartmentRepository;
-import org.example.student_management.service.DepartmentService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -23,10 +22,7 @@ public class DepartmentServiceImpl implements DepartmentService{
     public DepartmentResponse create(
             DepartmentRequest request) {
 
-        Department department = new Department(
-                request.name(),
-                request.description()
-        );
+        Department department = new Department();
 
         Department saved = repository.save(department);
 

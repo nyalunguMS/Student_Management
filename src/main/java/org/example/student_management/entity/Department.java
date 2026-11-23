@@ -1,7 +1,9 @@
 package org.example.student_management.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.ArrayList;
@@ -9,6 +11,8 @@ import java.util.List;
 
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "departments")
 public class Department {
@@ -25,7 +29,6 @@ public class Department {
     @OneToMany(mappedBy = "department")
     private List<Student> students = new ArrayList<>();
 
-    public Department() {}
 
 
 }
